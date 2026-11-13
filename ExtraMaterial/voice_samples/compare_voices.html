@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Narration voices · Learning and Accessibility Tools</title>
+<style>
+:root{--bg:#f7fafc;--card:#fff;--fg:#172e43;--muted:#526479;--line:#d5e0e9;--acc:#15376b}
+@media (prefers-color-scheme:dark){:root{--bg:#14171d;--card:#1d2129;--fg:#e8ebf1;--muted:#9aa3b5;--line:#2c323d;--acc:#ffb000}}
+body{margin:0;border-top:6px solid #00afe0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,Segoe UI,sans-serif}
+a{color:inherit;text-underline-offset:4px}.back{display:inline-block;margin-bottom:24px}a:focus-visible,audio:focus-visible{outline:3px solid #0877b8;outline-offset:4px}
+main{max-width:860px;margin:0 auto;padding:24px 16px}
+h1{font-size:22px;margin:0 0 4px}p{color:var(--muted);margin:0 0 18px}
+.row{display:grid;grid-template-columns:1fr 320px;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:8px}
+.row.cur{border-color:var(--acc)}.name{font-weight:600}.meta{color:var(--muted);font-size:13px}
+audio{width:100%}@media(max-width:620px){.row{grid-template-columns:1fr}}
+</style></head><body><main>
+<a class="back" href="../../index.html#example">← Back to the video tutorial</a>
+<h1>Narration voice samples</h1>
+<p>Piper open-source voices, all generated locally and all reading the same passage from slide 2. The German sample reads a translation of it. The highlighted one is the voice in the current video.</p>
+<div id="list"></div>
+</main><script>
+const V=[["01_en_US-lessac-high_CURRENT","lessac (high)","US English · female · used in current video",1],
+["02_en_US-ryan-high","ryan (high)","US English · male"],
+["03_en_US-ljspeech-high","ljspeech (high)","US English · female"],
+["04_en_US-libritts-high_speaker0","libritts (high), speaker 0","US English · multi-speaker model"],
+["05_en_US-libritts-high_speaker20","libritts (high), speaker 20","US English · multi-speaker model"],
+["06_en_US-amy-medium","amy (medium)","US English · female"],
+["07_en_US-joe-medium","joe (medium)","US English · male"],
+["08_en_US-hfc_female-medium","hfc_female (medium)","US English · female"],
+["09_en_GB-cori-high","cori (high)","British English · female"],
+["10_en_GB-alan-medium","alan (medium)","British English · male"],
+["11_en_GB-northern_english_male-medium","northern_english_male (medium)","British English · male"],
+["12_de_DE-thorsten-high_GERMAN","thorsten (high)","German · male · for a German version"]];
+document.getElementById("list").innerHTML=V.map(([f,n,m,c])=>`<div class="row${c?" cur":""}"><div><div class="name">${n}</div><div class="meta">${m} · <code>${f.replace(/^\d+_/,"").replace(/_(CURRENT|GERMAN|speaker\d+)$/,"")}</code></div></div><audio controls preload="none" aria-label="Listen to ${n}: ${m}" src="${f}.mp3"></audio></div>`).join("");
+document.addEventListener("play",e=>document.querySelectorAll("audio").forEach(a=>a!==e.target&&a.pause()),true);
+</script></body></html>

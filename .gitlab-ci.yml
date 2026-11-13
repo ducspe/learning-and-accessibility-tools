@@ -1,0 +1,15 @@
+default:
+  image: alpine:3
+
+deploy-pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp index.html public/index.html
+    - cp -R ExtraMaterial public/ExtraMaterial
+  pages: true
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
