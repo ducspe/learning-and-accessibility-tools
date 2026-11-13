@@ -1,6 +1,6 @@
 # Learning and Accessibility Tools
 
-**Visit the landing page:** [https://learning-and-accessibility-tools-0a2e8c.pages.hzdr.de](https://learning-and-accessibility-tools-0a2e8c.pages.hzdr.de)
+**Visit the landing page:** [https://ducspe.github.io/learning-and-accessibility-tools/](https://ducspe.github.io/learning-and-accessibility-tools/)
 
 ## References
 
