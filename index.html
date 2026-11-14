@@ -70,16 +70,9 @@
       gap: 40px;
       padding-block: 32px 60px;
     }
-    .eyebrow {
-      margin: 0 0 12px;
-      color: #32617c;
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      font-size: 12px;
-      font-weight: 700;
-    }
     .introduction { max-width: 780px; }
     .intro { max-width: 780px; margin: 0 0 20px; font-size: 18px; color: var(--muted); }
+    .intro a { color: var(--navy); font-weight: 650; text-underline-offset: 4px; }
     .byline { margin: 0; font-size: 15px; }
     .byline strong { display: block; font-size: 17px; font-weight: 650; }
     .byline span { display: block; margin-top: 3px; color: var(--muted); }
@@ -116,9 +109,8 @@
       border-top: 2px solid var(--navy);
       padding-top: 24px;
     }
-    .example h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.2; letter-spacing: -.6px; }
-    .example-intro { max-width: 780px; margin: 16px 0 12px; color: var(--muted); font-size: 17px; }
-    .video-meta { margin: 12px 0 16px; color: var(--muted); font-size: 14px; }
+    .example h2 { margin-bottom: 16px; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; letter-spacing: -.6px; text-align: center; }
+    .example-intro { max-width: 780px; margin: 0 0 24px; color: var(--muted); font-size: 17px; }
     .tutorial-video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #15376b; border-radius: 8px; }
     .video-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 16px; font-size: 14px; }
     .subtitle-control:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
@@ -186,10 +178,9 @@
         <p class="contact">We are Helmholtz AI consultants. Contact us at <a href="https://www.helmholtz.ai/applied-ai/ai-consultancy-teams/weigel-team/">Helmholtz AI – Weigel Team</a>.</p>
       </div>
       <section class="example" id="example" aria-labelledby="example-title">
-        <p class="intro">Explore practical tools for creating more accessible research and educational material.</p>
-        <p class="eyebrow">See the approach in practice</p>
+        <p class="intro"><a href="#resources">Explore practical tools</a> for creating more accessible research and educational materials. Let’s see the approach in practice.</p>
+        <p class="example-intro" id="example-description">The following video was created with Claude using the PowerPoint slides and speaker notes as its starting point. It illustrates how a presentation can guide an AI agent in creating a narrated tutorial.</p>
         <h2 id="example-title">From PowerPoint to a video tutorial</h2>
-        <p class="video-meta">5 min 14 sec · English narration · Subtitles in English, German, and Romanian</p>
         <video class="tutorial-video" id="tutorial-video" controls playsinline preload="metadata" poster="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.jpg" aria-label="Video tutorial: learning and accessibility tools" aria-describedby="example-description">
           <source src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.mp4" type="video/mp4">
           <track kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.en.vtt" srclang="en" label="English">
@@ -213,7 +204,6 @@
           <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.ro.srt" download>Romanian subtitles (SRT)</a>
         </div>
         <p id="subtitle-error" role="status" hidden>The selected subtitles could not be loaded. You can download the subtitle files above.</p>
-        <p class="example-intro" id="example-description">This video was created with Claude using the PowerPoint slides and speaker notes as its starting point. It illustrates how a presentation can guide an AI agent in creating a narrated tutorial.</p>
         <div class="example-materials">
           <section id="downloads" aria-labelledby="downloads-title">
             <h3 id="downloads-title">Presentation &amp; poster</h3>
