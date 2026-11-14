@@ -54,9 +54,9 @@
       margin: 0;
       color: var(--navy);
       font-weight: 750;
-      font-size: 17px;
-      letter-spacing: -.2px;
-      line-height: 1.4;
+      font-size: clamp(26px, 3vw, 34px);
+      letter-spacing: -.6px;
+      line-height: 1.2;
     }
     main {
       display: grid;
@@ -104,7 +104,7 @@
       border-top: 2px solid var(--navy);
       padding-top: 24px;
     }
-    .example h2 { margin-bottom: 16px; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; letter-spacing: -.6px; text-align: center; }
+    .example h2 { margin-bottom: 16px; font-size: clamp(22px, 2.5vw, 28px); line-height: 1.2; letter-spacing: -.4px; text-align: center; }
     .tutorial-video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #15376b; border-radius: 8px; }
     .video-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 16px; font-size: 14px; }
     .subtitle-control:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
@@ -135,7 +135,6 @@
     @media (max-width: 480px) {
       .shell { width: calc(100% - 40px); }
       .masthead { padding-block: 21px; }
-      .site-name { font-size: 15px; }
       .intro { font-size: 16px; }
       .resource { grid-template-columns: 26px minmax(0, 1fr) 20px; gap: 10px; padding-block: 23px; }
       .resource-title { font-size: 19px; }
