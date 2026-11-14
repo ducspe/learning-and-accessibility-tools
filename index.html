@@ -79,8 +79,8 @@
       font-weight: 700;
     }
     .introduction { max-width: 780px; }
-    .intro { margin: 0; font-size: 18px; color: var(--muted); }
-    .byline { margin: 16px 0 0; font-size: 15px; }
+    .intro { max-width: 780px; margin: 0 0 20px; font-size: 18px; color: var(--muted); }
+    .byline { margin: 0; font-size: 15px; }
     .byline strong { display: block; font-size: 17px; font-weight: 650; }
     .byline span { display: block; margin-top: 3px; color: var(--muted); }
     .contact { margin: 10px 0 0; font-size: 15px; color: var(--muted); }
@@ -111,7 +111,6 @@
     .description { display: block; margin-top: 7px; color: var(--ink); font-size: 15px; }
     .destination { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
     .arrow { color: #196f97; font-size: 23px; line-height: 1.2; }
-    .reference-note { margin: 18px 0 0; color: var(--muted); font-size: 13px; }
     section[id] { scroll-margin-top: 24px; }
     .example {
       border-top: 2px solid var(--navy);
@@ -180,7 +179,6 @@
     </header>
     <main id="main-content">
       <div class="introduction">
-        <p class="intro">Explore practical tools for creating more accessible research and educational material.</p>
         <p class="byline">
           <strong>Danu Caus</strong>
           <span>Helmholtz-Zentrum Hereon (KSN) · Helmholtz AI</span>
@@ -188,6 +186,7 @@
         <p class="contact">We are Helmholtz AI consultants. Contact us at <a href="https://www.helmholtz.ai/applied-ai/ai-consultancy-teams/weigel-team/">Helmholtz AI – Weigel Team</a>.</p>
       </div>
       <section class="example" id="example" aria-labelledby="example-title">
+        <p class="intro">Explore practical tools for creating more accessible research and educational material.</p>
         <p class="eyebrow">See the approach in practice</p>
         <h2 id="example-title">From PowerPoint to a video tutorial</h2>
         <p class="video-meta">5 min 14 sec · English narration · Subtitles in English, German, and Romanian</p>
@@ -293,7 +292,6 @@
             </a>
           </li>
         </ol>
-        <p class="reference-note">Reference numbers match the poster.</p>
       </section>
     </main>
     <footer>
