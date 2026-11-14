@@ -54,42 +54,36 @@
       border-bottom: 1px solid var(--line);
     }
     .site-name {
+      margin: 0;
       color: var(--navy);
       font-weight: 750;
       font-size: 17px;
       letter-spacing: -.2px;
+      line-height: 1.4;
     }
     .page-nav { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; }
     .page-nav a { text-underline-offset: 4px; }
     main {
       display: grid;
-      grid-template-columns: minmax(0, .86fr) minmax(0, 1.3fr);
+      grid-template-columns: minmax(0, 1fr);
       align-items: start;
-      gap: 76px;
-      padding-block: 64px 60px;
+      gap: 40px;
+      padding-block: 32px 60px;
     }
     .eyebrow {
-      margin: 0 0 18px;
+      margin: 0 0 12px;
       color: #32617c;
       text-transform: uppercase;
       letter-spacing: 1.8px;
       font-size: 12px;
       font-weight: 700;
     }
-    h1 {
-      margin: 0;
-      color: var(--navy);
-      font-size: clamp(34px, 3.8vw, 48px);
-      font-weight: 650;
-      letter-spacing: -1.5px;
-      line-height: 1.13;
-      text-wrap: balance;
-    }
-    .intro { margin: 25px 0 0; font-size: 18px; color: var(--muted); }
-    .byline { margin: 28px 0 0; font-size: 15px; }
+    .introduction { max-width: 780px; }
+    .intro { margin: 0; font-size: 18px; color: var(--muted); }
+    .byline { margin: 16px 0 0; font-size: 15px; }
     .byline strong { display: block; font-size: 17px; font-weight: 650; }
     .byline span { display: block; margin-top: 3px; color: var(--muted); }
-    .contact { margin: 16px 0 0; font-size: 15px; color: var(--muted); }
+    .contact { margin: 10px 0 0; font-size: 15px; color: var(--muted); }
     .contact a { color: var(--navy); text-underline-offset: 4px; }
     .resources-heading {
       display: flex;
@@ -120,13 +114,12 @@
     .reference-note { margin: 18px 0 0; color: var(--muted); font-size: 13px; }
     section[id] { scroll-margin-top: 24px; }
     .example {
-      grid-column: 1 / -1;
       border-top: 2px solid var(--navy);
-      padding-top: 36px;
+      padding-top: 24px;
     }
     .example h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.2; letter-spacing: -.6px; }
     .example-intro { max-width: 780px; margin: 16px 0 12px; color: var(--muted); font-size: 17px; }
-    .video-meta { margin: 0 0 20px; color: var(--muted); font-size: 14px; }
+    .video-meta { margin: 12px 0 16px; color: var(--muted); font-size: 14px; }
     .tutorial-video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #15376b; border-radius: 8px; }
     .video-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 16px; font-size: 14px; }
     .subtitle-control:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
@@ -140,7 +133,6 @@
     .voice-intro { margin: 0 0 18px; color: var(--muted); }
     .voice-link { display: inline-block; padding: 11px 16px; color: var(--navy); background: #e5f2fa; border: 1px solid #b9d6e8; border-radius: 4px; font-weight: 650; }
     .voice-link:hover { background: #d8ebf7; }
-    .watch-link { display: inline-block; margin-top: 22px; color: var(--navy); font-weight: 650; text-underline-offset: 4px; }
     footer {
       display: flex;
       justify-content: space-between;
@@ -152,17 +144,13 @@
     }
     footer p { margin: 0; }
     @media (max-width: 820px) {
-      main { grid-template-columns: 1fr; gap: 36px; padding-block: 38px; }
-      h1 { max-width: 630px; font-size: clamp(34px, 6vw, 44px); }
-      .intro { margin-top: 18px; max-width: 530px; }
-      .byline { margin-top: 20px; }
+      main { gap: 28px; padding-block: 24px 38px; }
       .example-materials { grid-template-columns: 1fr; gap: 30px; }
     }
     @media (max-width: 480px) {
       .shell { width: calc(100% - 40px); }
       .masthead { align-items: flex-start; flex-direction: column; gap: 14px; padding-block: 21px; }
       .site-name { font-size: 15px; }
-      h1 { font-size: 35px; letter-spacing: -1px; }
       .intro { font-size: 16px; }
       .resource { grid-template-columns: 26px minmax(0, 1fr) 20px; gap: 10px; padding-block: 23px; }
       .resource-title { font-size: 19px; }
@@ -172,35 +160,76 @@
       body { background: white; }
       .shell { width: 100%; }
       main { display: block; padding-block: 24px; }
-      .introduction { margin-bottom: 28px; }
+      .introduction, .example { margin-bottom: 28px; }
       .resource { break-inside: avoid; padding-block: 14px; }
       .skip-link { display: none; }
-      .page-nav, .tutorial-video, .video-tools, .watch-link { display: none; }
+      .page-nav, .tutorial-video, .video-tools { display: none; }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#resources">Skip to resources</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="shell">
     <header class="masthead">
-      <span class="site-name">Learning and Accessibility Tools</span>
+      <h1 class="site-name">Learning and Accessibility Tools</h1>
       <nav class="page-nav" aria-label="Page sections">
-        <a href="#resources">References</a>
         <a href="#example">Video example</a>
         <a href="#downloads">Downloads</a>
+        <a href="#resources">References</a>
       </nav>
     </header>
-    <main>
-      <section class="introduction" aria-labelledby="page-title">
-        <p class="eyebrow">Examples &amp; resources</p>
-        <h1 id="page-title">Tools for accessible learning and research</h1>
-        <p class="intro">Explore practical tools for creating more accessible research and educational material, and see how a PowerPoint presentation becomes a narrated video.</p>
-        <a class="watch-link" href="#example">Watch the example ↓</a>
+    <main id="main-content">
+      <div class="introduction">
+        <p class="intro">Explore practical tools for creating more accessible research and educational material.</p>
         <p class="byline">
           <strong>Danu Caus</strong>
-          <span>Helmholtz-Zentrum Hereon (KSN)<br>Helmholtz AI</span>
+          <span>Helmholtz-Zentrum Hereon (KSN) · Helmholtz AI</span>
         </p>
         <p class="contact">We are Helmholtz AI consultants. Contact us at <a href="https://www.helmholtz.ai/applied-ai/ai-consultancy-teams/weigel-team/">Helmholtz AI – Weigel Team</a>.</p>
+      </div>
+      <section class="example" id="example" aria-labelledby="example-title">
+        <p class="eyebrow">See the approach in practice</p>
+        <h2 id="example-title">From PowerPoint to a video tutorial</h2>
+        <p class="video-meta">5 min 14 sec · English narration · Subtitles in English, German, and Romanian</p>
+        <video class="tutorial-video" id="tutorial-video" controls playsinline preload="metadata" poster="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.jpg" aria-label="Video tutorial: learning and accessibility tools" aria-describedby="example-description">
+          <source src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.mp4" type="video/mp4">
+          <track kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.en.vtt" srclang="en" label="English">
+          <track id="german-subtitles" kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.de.vtt" srclang="de" label="Deutsch" default>
+          <track kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.ro.vtt" srclang="ro" label="Română">
+          Your browser does not support embedded video. <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.mp4">Download the video tutorial</a>.
+        </video>
+        <div class="video-tools">
+          <div class="subtitle-control" id="subtitle-control" hidden>
+            <label for="subtitle-language">Subtitles</label>
+            <select id="subtitle-language" aria-controls="tutorial-video">
+              <option value="off">Off</option>
+              <option value="en" lang="en">English</option>
+              <option value="de" lang="de" selected>Deutsch</option>
+              <option value="ro" lang="ro">Română</option>
+            </select>
+          </div>
+          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.mp4" download>Download video (MP4 · 21 MB)</a>
+          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.en.srt" download>English subtitles (SRT)</a>
+          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.de.srt" download>German subtitles (SRT)</a>
+          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.ro.srt" download>Romanian subtitles (SRT)</a>
+        </div>
+        <p id="subtitle-error" role="status" hidden>The selected subtitles could not be loaded. You can download the subtitle files above.</p>
+        <p class="example-intro" id="example-description">This video was created with Claude using the PowerPoint slides and speaker notes as its starting point. It illustrates how a presentation can guide an AI agent in creating a narrated tutorial.</p>
+        <div class="example-materials">
+          <section id="downloads" aria-labelledby="downloads-title">
+            <h3 id="downloads-title">Presentation &amp; poster</h3>
+            <ul class="downloads">
+              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Presentation.pdf">Read the presentation</a><span class="file-type">PDF · 7 slides</span></li>
+              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Presentation.pptx" download>Download the presentation &amp; speaker notes</a><span class="file-type">PowerPoint · 3.8 MB</span></li>
+              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Poster.pptx" download>Download the poster</a><span class="file-type">PowerPoint · 4 MB</span></li>
+            </ul>
+          </section>
+          <section aria-labelledby="voices-title">
+            <h3 id="voices-title">Try different narration voices</h3>
+            <p class="voice-intro">Listen to 12 samples reading the same passage: US English, British English, and a German translation. The voice used in this tutorial is highlighted.</p>
+            <a class="voice-link" href="ExtraMaterial/voice_samples/compare_voices.html">Compare the voice samples →</a>
+          </section>
+        </div>
       </section>
       <section id="resources" aria-labelledby="resources-title">
         <div class="resources-heading">
@@ -265,50 +294,6 @@
           </li>
         </ol>
         <p class="reference-note">Reference numbers match the poster.</p>
-      </section>
-      <section class="example" id="example" aria-labelledby="example-title">
-        <p class="eyebrow">See the approach in practice</p>
-        <h2 id="example-title">From PowerPoint to a video tutorial</h2>
-        <p class="example-intro" id="example-description">This video was created with Claude using the PowerPoint slides and speaker notes as its starting point. It illustrates how a presentation can guide an AI agent in creating a narrated tutorial.</p>
-        <p class="video-meta">5 min 14 sec · English narration · Subtitles in English, German, and Romanian</p>
-        <video class="tutorial-video" id="tutorial-video" controls playsinline preload="metadata" poster="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.jpg" aria-label="Video tutorial: learning and accessibility tools" aria-describedby="example-description">
-          <source src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.mp4" type="video/mp4">
-          <track kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.en.vtt" srclang="en" label="English">
-          <track id="german-subtitles" kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.de.vtt" srclang="de" label="Deutsch" default>
-          <track kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.ro.vtt" srclang="ro" label="Română">
-          Your browser does not support embedded video. <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.mp4">Download the video tutorial</a>.
-        </video>
-        <div class="video-tools">
-          <div class="subtitle-control" id="subtitle-control" hidden>
-            <label for="subtitle-language">Subtitles</label>
-            <select id="subtitle-language" aria-controls="tutorial-video">
-              <option value="off">Off</option>
-              <option value="en" lang="en">English</option>
-              <option value="de" lang="de" selected>Deutsch</option>
-              <option value="ro" lang="ro">Română</option>
-            </select>
-          </div>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.mp4" download>Download video (MP4 · 21 MB)</a>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.en.srt" download>English subtitles (SRT)</a>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.de.srt" download>German subtitles (SRT)</a>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_Tutorial.ro.srt" download>Romanian subtitles (SRT)</a>
-        </div>
-        <p id="subtitle-error" role="status" hidden>The selected subtitles could not be loaded. You can download the subtitle files above.</p>
-        <div class="example-materials">
-          <section id="downloads" aria-labelledby="downloads-title">
-            <h3 id="downloads-title">Presentation &amp; poster</h3>
-            <ul class="downloads">
-              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Presentation.pdf">Read the presentation</a><span class="file-type">PDF · 7 slides</span></li>
-              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Presentation.pptx" download>Download the presentation &amp; speaker notes</a><span class="file-type">PowerPoint · 3.8 MB</span></li>
-              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Poster.pptx" download>Download the poster</a><span class="file-type">PowerPoint · 4 MB</span></li>
-            </ul>
-          </section>
-          <section aria-labelledby="voices-title">
-            <h3 id="voices-title">Try different narration voices</h3>
-            <p class="voice-intro">Listen to 12 samples reading the same passage: US English, British English, and a German translation. The voice used in this tutorial is highlighted.</p>
-            <a class="voice-link" href="ExtraMaterial/voice_samples/compare_voices.html">Compare the voice samples →</a>
-          </section>
-        </div>
       </section>
     </main>
     <footer>
