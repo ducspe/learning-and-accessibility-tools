@@ -28,7 +28,7 @@
       -webkit-text-size-adjust: 100%;
     }
     a { color: inherit; }
-    :is(a, button, select, video):focus-visible {
+    :is(a, button, input, select, video):focus-visible {
       outline: 3px solid #0877b8;
       outline-offset: 5px;
       border-radius: 3px;
@@ -106,8 +106,16 @@
     .example h2 { margin-bottom: 16px; font-size: clamp(22px, 2.5vw, 28px); line-height: 1.2; letter-spacing: -.4px; text-align: center; }
     .tutorial-video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #15376b; border-radius: 8px; }
     .video-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 16px; font-size: 14px; }
-    .subtitle-control:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .language-controls:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-bottom: 12px; }
+    .language-control { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
     select { padding: 8px 32px 8px 12px; font: inherit; color: var(--ink); background: white; border: 1px solid #8c9fb0; border-radius: 4px; }
+    .share-button { padding: 9px 14px; font: inherit; color: var(--navy); background: #e5f2fa; border: 1px solid #b9d6e8; border-radius: 4px; cursor: pointer; }
+    .share-button:hover { background: #d8ebf7; }
+    .video-hint { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+    .share-fallback { margin-bottom: 16px; }
+    .share-fallback input { display: block; width: 100%; padding: 10px; font: inherit; color: var(--ink); border: 1px solid #8c9fb0; border-radius: 4px; }
+    .video-status { margin: 0; font-size: 14px; }
+    .video-status:not(:empty) { margin-bottom: 16px; }
     .video-tools a, .downloads a, .voice-link { text-underline-offset: 4px; }
     .example-materials { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 36px; }
     h3 { margin: 0 0 12px; color: var(--navy); font-size: 20px; font-weight: 650; }
@@ -146,7 +154,7 @@
       .introduction, .example { margin-bottom: 28px; }
       .resource { break-inside: avoid; padding-block: 14px; }
       .skip-link { display: none; }
-      .tutorial-video, .video-tools { display: none; }
+      .tutorial-video, .video-tools, .language-controls, .video-hint, .share-fallback, .video-status { display: none; }
     }
   </style>
 </head>
@@ -167,15 +175,16 @@
       <section class="example" id="example" aria-labelledby="example-title">
         <p class="intro" id="example-description"><a href="#resources">Explore practical tools</a> for creating more accessible research and educational materials. Let’s see the approach in practice. The following video was created with Claude using the PowerPoint slides and speaker notes as its starting point. It illustrates how a presentation can guide an AI agent in creating a narrated tutorial.</p>
         <h2 id="example-title">From PowerPoint to a video tutorial</h2>
-        <video class="tutorial-video" id="tutorial-video" controls playsinline preload="metadata" poster="ExtraMaterial/LearningAndAccessibilityTools_TutorialCoverImage.jpg" aria-label="Video tutorial: learning and accessibility tools" aria-describedby="example-description">
-          <source src="ExtraMaterial/LearningAndAccessibilityTools_tutorial.mp4" type="video/mp4">
-          <track kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_tutorial.en.vtt" srclang="en" label="English">
-          <track id="german-subtitles" kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_tutorial.de.vtt" srclang="de" label="Deutsch" default>
-          <track kind="subtitles" src="ExtraMaterial/LearningAndAccessibilityTools_tutorial.ro.vtt" srclang="ro" label="Română">
-          Your browser does not support embedded video. <a href="ExtraMaterial/LearningAndAccessibilityTools_tutorial.mp4">Download the video tutorial</a>.
-        </video>
-        <div class="video-tools">
-          <div class="subtitle-control" id="subtitle-control" hidden>
+        <div class="language-controls" id="language-controls" hidden>
+          <div class="language-control">
+            <label for="audio-language">Audio</label>
+            <select id="audio-language" aria-controls="tutorial-video" aria-describedby="video-hint">
+              <option value="en" lang="en" selected>English</option>
+              <option value="de" lang="de">Deutsch</option>
+              <option value="ro" lang="ro">Română</option>
+            </select>
+          </div>
+          <div class="language-control">
             <label for="subtitle-language">Subtitles</label>
             <select id="subtitle-language" aria-controls="tutorial-video">
               <option value="off">Off</option>
@@ -184,11 +193,30 @@
               <option value="ro" lang="ro">Română</option>
             </select>
           </div>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_tutorial.mp4" download>Download video (MP4 · 22 MB)</a>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_tutorial.en.srt" download>English subtitles (SRT)</a>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_tutorial.de.srt" download>German subtitles (SRT)</a>
-          <a href="ExtraMaterial/LearningAndAccessibilityTools_tutorial.ro.srt" download>Romanian subtitles (SRT)</a>
+          <button class="share-button" id="copy-video-link" type="button">Copy video link</button>
         </div>
+        <p class="video-hint" id="video-hint" hidden>Changing audio restarts the video. Copy the video link to share your audio and subtitle choices.</p>
+        <p class="video-status" id="video-status" role="status"></p>
+        <div class="share-fallback" id="share-fallback" hidden>
+          <label for="share-url">Copy this video link:</label>
+          <input id="share-url" type="url" readonly>
+        </div>
+        <video class="tutorial-video" id="tutorial-video" controls playsinline preload="metadata" poster="ExtraMaterial/VideoTutorial/LearningAndAccessibilityTools_TutorialCoverImage.jpg" aria-label="Video tutorial: learning and accessibility tools" aria-describedby="example-description">
+          <source src="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.mp4" type="video/mp4">
+          <track kind="subtitles" src="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.en.vtt" srclang="en" label="English">
+          <track id="german-subtitles" kind="subtitles" src="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.de.vtt" srclang="de" label="Deutsch" default>
+          <track kind="subtitles" src="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.ro.vtt" srclang="ro" label="Română">
+          Your browser does not support embedded video. <a id="video-fallback" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.mp4">Download the video tutorial</a>.
+        </video>
+        <div class="video-tools">
+          <a id="video-download" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.mp4" download>Download English video (MP4 · 22 MB)</a>
+          <a data-subtitles="en" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.en.srt" download>English subtitles (SRT)</a>
+          <a data-subtitles="de" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.de.srt" download>German subtitles (SRT)</a>
+          <a data-subtitles="ro" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.ro.srt" download>Romanian subtitles (SRT)</a>
+          <a href="ExtraMaterial/VideoTutorial/LearningAndAccessibilityTools_narration_script.md" download>Download narration scripts (EN · DE · RO)</a>
+        </div>
+        <noscript><p>Other audio versions: <a href="ExtraMaterial/VideoTutorial/audio_de/LearningAndAccessibilityTools_tutorial_audio-de.mp4">Deutsch</a> · <a href="ExtraMaterial/VideoTutorial/audio_ro/LearningAndAccessibilityTools_tutorial_audio-ro.mp4">Română</a>. Enable JavaScript to choose languages and share a video link.</p></noscript>
+        <p id="video-error" role="status" hidden>The video could not be loaded. Try another audio language or download the selected video above.</p>
         <p id="subtitle-error" role="status" hidden>The selected subtitles could not be loaded. You can download the subtitle files above.</p>
         <div class="example-materials">
           <section id="downloads" aria-labelledby="downloads-title">
@@ -201,8 +229,8 @@
           </section>
           <section aria-labelledby="voices-title">
             <h3 id="voices-title">Try different narration voices</h3>
-            <p class="voice-intro">Listen to 18 samples reading the same passage in US English, British English, German, and Romanian. The voice used in this tutorial is highlighted.</p>
-            <a class="voice-link" href="ExtraMaterial/voice_samples/compare_voices.html">Compare the voice samples →</a>
+            <p class="voice-intro">Listen to 18 samples reading the same passage in US English, British English, German, and Romanian. The voice used for the English tutorial is highlighted.</p>
+            <a class="voice-link" href="ExtraMaterial/VoiceSamples/compare_voices.html">Compare the voice samples →</a>
           </section>
         </div>
       </section>
@@ -278,21 +306,69 @@
   <script>
     const video = document.getElementById('tutorial-video');
     const subtitleTracks = Array.from(video.querySelectorAll('track'));
+    const audioLanguage = document.getElementById('audio-language');
     const subtitleLanguage = document.getElementById('subtitle-language');
     const subtitleError = document.getElementById('subtitle-error');
+    const videoError = document.getElementById('video-error');
+    const videoStatus = document.getElementById('video-status');
+    const shareFallback = document.getElementById('share-fallback');
+    const shareInput = document.getElementById('share-url');
+    const audioVersions = {
+      en: { name: 'English', size: '22 MB' },
+      de: { name: 'German', size: '23 MB' },
+      ro: { name: 'Romanian', size: '23 MB' }
+    };
+    let currentAudio = 'en';
+    let loadingAudio = video.readyState === 0;
+    let resumeAfterLoad = false;
+
+    function selectionUrl() {
+      const url = new URL(window.location.href);
+      url.searchParams.set('audio', audioLanguage.value);
+      url.searchParams.set('subtitles', subtitleLanguage.value);
+      return url;
+    }
+
+    function updateLink() {
+      const url = selectionUrl();
+      // Preserve the current section and any unrelated query parameters.
+      if (url.href !== window.location.href) {
+        history.replaceState(history.state, '', url);
+      }
+      url.hash = 'example';
+      shareInput.value = url.href;
+      videoStatus.textContent = '';
+      shareFallback.hidden = true;
+    }
+
+    function tutorialPath(audio) {
+      return `ExtraMaterial/VideoTutorial/audio_${audio}/LearningAndAccessibilityTools_tutorial_audio-${audio}`;
+    }
+
+    function subtitlePath(audio, language, extension) {
+      return `${tutorialPath(audio)}.${language}.${extension}`;
+    }
 
     function setSubtitles() {
       const selectedTrack = subtitleTracks.find(track => track.srclang === subtitleLanguage.value);
       for (const track of video.textTracks) {
         track.mode = track === selectedTrack?.track ? 'showing' : 'disabled';
       }
+      for (const track of subtitleTracks) {
+        track.default = track === selectedTrack;
+      }
       syncSubtitleError();
     }
 
     function syncSubtitleControl() {
+      if (loadingAudio) return;
       const activeTrack = Array.from(video.textTracks).find(track => track.mode === 'showing');
-      const language = activeTrack?.language;
-      subtitleLanguage.value = language === 'ger' ? 'de' : language || 'off';
+      const aliases = { ger: 'de', deu: 'de', rum: 'ro', ron: 'ro', eng: 'en' };
+      const language = aliases[activeTrack?.language] || activeTrack?.language || 'off';
+      if (['off', 'en', 'de', 'ro'].includes(language) && language !== subtitleLanguage.value) {
+        subtitleLanguage.value = language;
+        updateLink();
+      }
       syncSubtitleError();
     }
 
@@ -301,15 +377,92 @@
       subtitleError.hidden = !selectedTrack || selectedTrack.readyState !== HTMLTrackElement.ERROR;
     }
 
-    document.getElementById('subtitle-control').hidden = false;
-    subtitleLanguage.addEventListener('change', setSubtitles);
+    function setAudio() {
+      const language = audioLanguage.value;
+      if (language === currentAudio) {
+        setSubtitles();
+        return;
+      }
+      resumeAfterLoad = resumeAfterLoad || (!video.paused && !video.ended);
+      loadingAudio = true;
+      video.pause();
+      currentAudio = language;
+      videoError.hidden = true;
+      const source = `${tutorialPath(language)}.mp4`;
+      for (const track of subtitleTracks) {
+        track.src = subtitlePath(language, track.srclang, 'vtt');
+      }
+      for (const link of document.querySelectorAll('[data-subtitles]')) {
+        link.href = subtitlePath(language, link.dataset.subtitles, 'srt');
+      }
+      const download = document.getElementById('video-download');
+      download.href = source;
+      download.textContent = `Download ${audioVersions[language].name} video (MP4 · ${audioVersions[language].size})`;
+      document.getElementById('video-fallback').href = source;
+      video.querySelector('source').src = source;
+      setSubtitles();
+      video.load();
+    }
+
+    function readLink() {
+      const parameters = new URL(window.location.href).searchParams;
+      const audio = parameters.get('audio');
+      const subtitles = parameters.get('subtitles');
+      audioLanguage.value = Object.hasOwn(audioVersions, audio) ? audio : 'en';
+      subtitleLanguage.value = ['off', 'en', 'de', 'ro'].includes(subtitles) ? subtitles : 'de';
+      setAudio();
+      updateLink();
+    }
+
+    document.getElementById('language-controls').hidden = false;
+    document.getElementById('video-hint').hidden = false;
+    audioLanguage.addEventListener('change', () => {
+      setAudio();
+      updateLink();
+    });
+    subtitleLanguage.addEventListener('change', () => {
+      setSubtitles();
+      updateLink();
+    });
+    video.addEventListener('loadedmetadata', () => {
+      setSubtitles();
+      loadingAudio = false;
+      if (resumeAfterLoad) {
+        resumeAfterLoad = false;
+        video.play().catch(() => {
+          videoStatus.textContent = 'Press play to start the selected audio version.';
+        });
+      }
+    });
+    video.addEventListener('error', () => {
+      videoError.hidden = false;
+      resumeAfterLoad = false;
+    });
+    // A failed <source> does not always dispatch an error on the <video> itself.
+    video.querySelector('source').addEventListener('error', () => {
+      videoError.hidden = false;
+      resumeAfterLoad = false;
+    });
     video.textTracks.addEventListener('change', syncSubtitleControl);
     video.textTracks.addEventListener('addtrack', setSubtitles);
     for (const track of subtitleTracks) {
       track.addEventListener('error', syncSubtitleError);
       track.addEventListener('load', syncSubtitleError);
     }
-    setSubtitles();
+    document.getElementById('copy-video-link').addEventListener('click', async () => {
+      updateLink();
+      try {
+        await navigator.clipboard.writeText(shareInput.value);
+        videoStatus.textContent = 'Video link copied with your audio and subtitle choices.';
+      } catch {
+        shareFallback.hidden = false;
+        shareInput.focus();
+        shareInput.select();
+        videoStatus.textContent = 'Select and copy the video link below.';
+      }
+    });
+    window.addEventListener('popstate', readLink);
+    readLink();
   </script>
 </body>
 </html>

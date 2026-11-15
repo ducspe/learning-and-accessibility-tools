@@ -1,0 +1,505 @@
+1
+00:00:00,840 --> 00:00:03,675
+Willkommen. Dieses kurze
+Tutorial fasst praktische
+
+2
+00:00:03,715 --> 00:00:06,148
+Beispiele für Ideen
+und Werkzeuge zusammen,
+
+3
+00:00:06,188 --> 00:00:10,559
+mit denen sich zugängliche Forschungs-
+und Lehrmaterialien erstellen lassen.
+
+4
+00:00:10,599 --> 00:00:14,098
+Ziel ist es, Forschungs-
+und Lehrmaterial leichter erstellen,
+
+5
+00:00:14,138 --> 00:00:17,619
+leichter verstehen und leichter
+wieder aufgreifen zu können.
+
+6
+00:00:17,659 --> 00:00:21,377
+Die Präsentation demonstriert
+zugleich ihren eigenen Ansatz:
+
+7
+00:00:21,417 --> 00:00:23,894
+Dieselben Folien
+und Sprechernotizen können
+
+8
+00:00:23,934 --> 00:00:25,895
+eine vortragende Person leiten oder,
+
+9
+00:00:25,935 --> 00:00:28,744
+wie hier, ein KI-generiertes Tutorial.
+
+10
+00:00:28,784 --> 00:00:31,967
+Das erste Werkzeug ist
+ein LaTeX-Formelgenerator.
+
+11
+00:00:32,007 --> 00:00:34,164
+Statt sich die LaTeX-Syntax zu merken,
+
+12
+00:00:34,204 --> 00:00:37,095
+beschreiben Sie die Gleichung
+in normaler Sprache.
+
+13
+00:00:37,135 --> 00:00:41,049
+Hier fragt der Prompt unten links
+nach dem Integral von f von x,
+
+14
+00:00:41,089 --> 00:00:43,992
+wobei f von x gleich x hoch
+vier plus drei ist.
+
+15
+00:00:44,032 --> 00:00:47,760
+Der Assistent fügt den passenden
+LaTeX-Code in das Dokument ein,
+
+16
+00:00:47,800 --> 00:00:51,333
+und Sie können die Änderung
+behalten oder rückgängig machen.
+
+17
+00:00:51,373 --> 00:00:56,845
+Rechts sehen Sie das kompilierte Ergebnis:
+f von x gleich x hoch vier plus drei,
+
+18
+00:00:56,885 --> 00:01:01,156
+und das Integral, x hoch fünf
+durch fünf, plus drei x, plus C.
+
+19
+00:01:01,196 --> 00:01:05,930
+Dieses Beispiel nutzt Prism von OpenAI,
+unten auf der Folie verlinkt.
+
+20
+00:01:05,970 --> 00:01:09,040
+Unabhängig vom Werkzeug
+sollten Sie immer prüfen,
+
+21
+00:01:09,080 --> 00:01:14,221
+ob die erzeugte Gleichung und Notation
+der beabsichtigten Mathematik entsprechen.
+
+22
+00:01:14,261 --> 00:01:19,001
+Als Nächstes: Videos mit Claude erstellen,
+verankert in Präsentationsfolien.
+
+23
+00:01:19,041 --> 00:01:21,384
+Beginnen Sie mit Ihren eigenen Folien.
+
+24
+00:01:21,424 --> 00:01:25,972
+Sie legen Inhalt und Reihenfolge fest
+und dienen als verlässliche Grundlage,
+
+25
+00:01:26,012 --> 00:01:27,823
+die das Video beim Thema hält.
+
+26
+00:01:27,863 --> 00:01:31,587
+Ein eigener Erzählstrang verankert
+den KI-Agenten und hilft,
+
+27
+00:01:31,627 --> 00:01:33,447
+Halluzinationen zu vermeiden.
+
+28
+00:01:33,487 --> 00:01:36,412
+Die Sprechernotizen liefern
+dann die Erklärungen,
+
+29
+00:01:36,452 --> 00:01:40,082
+für Sie als vortragende Person
+und als Leitfaden für die KI.
+
+30
+00:01:40,122 --> 00:01:44,206
+Mit Folien und Notizen kann Claude
+Sprach- und Videowerkzeuge nutzen,
+
+31
+00:01:44,246 --> 00:01:48,012
+um ein vollständiges Tutorial
+zusammenzustellen, so wie dieses.
+
+32
+00:01:48,052 --> 00:01:51,165
+Als Stimme können Sie
+ein Open-Source-Stimmmodell wählen,
+
+33
+00:01:51,205 --> 00:01:52,215
+wie in diesem Video,
+
+34
+00:01:52,255 --> 00:01:55,544
+oder einen Dienst wie ElevenLabs
+für eine natürlichere Stimme
+
+35
+00:01:55,584 --> 00:01:56,894
+mit besserer Intonation.
+
+36
+00:01:56,934 --> 00:01:59,536
+Sie könnten sogar Ihre
+eigene Stimme klonen.
+
+37
+00:01:59,576 --> 00:02:03,939
+Das ist optional und eine Frage,
+über die es sich zu diskutieren lohnt.
+
+38
+00:02:03,979 --> 00:02:07,832
+Sie können auch Untertitel
+in verschiedenen Sprachen anfordern,
+
+39
+00:02:07,872 --> 00:02:10,343
+für mehr Inklusion und Barrierefreiheit.
+
+40
+00:02:10,383 --> 00:02:14,974
+Rechts sehen Sie Beispielvideos,
+die so entstanden sind, zu AlphaFold 2,
+
+41
+00:02:15,014 --> 00:02:18,744
+Diffusion und Tokenisierung,
+abrufbar über den Link unten.
+
+42
+00:02:18,784 --> 00:02:22,085
+Prüfen Sie vor der Veröffentlichung
+die Sprachausgabe,
+
+43
+00:02:22,125 --> 00:02:24,890
+die Visualisierungen und die Untertitel.
+
+44
+00:02:24,930 --> 00:02:28,811
+Die dritte Idee:
+Videotranskripte als Referenz nutzen.
+
+45
+00:02:28,851 --> 00:02:30,826
+Lange aufgezeichnete Vorlesungen,
+
+46
+00:02:30,866 --> 00:02:34,814
+wie diese über maschinelles Lernen
+zur Vorhersage von Proteinstrukturen,
+
+47
+00:02:34,854 --> 00:02:38,170
+lassen sich durch bloßes
+Vorspulen nur schwer durchsuchen.
+
+48
+00:02:38,210 --> 00:02:41,552
+Die Vorlesung ist oben links
+auf der Folie verlinkt.
+
+49
+00:02:41,592 --> 00:02:44,012
+Auf YouTube öffnen Sie das Transkript über
+
+50
+00:02:44,052 --> 00:02:47,040
+die Schaltfläche „Show
+transcript“ unter dem Video.
+
+51
+00:02:47,080 --> 00:02:48,650
+Es öffnet sich ein Bereich,
+
+52
+00:02:48,690 --> 00:02:53,026
+in dem jede Zeile des gesprochenen Textes
+mit einem Zeitstempel verknüpft ist.
+
+53
+00:02:53,066 --> 00:02:57,014
+Geben Sie einem KI-Assistenten
+die URL des Videos und bitten Sie ihn,
+
+54
+00:02:57,054 --> 00:02:59,431
+das Transkript zu lesen
+und den Zeitstempel
+
+55
+00:02:59,471 --> 00:03:01,587
+einer bestimmten Erklärung zu nennen.
+
+56
+00:03:01,627 --> 00:03:04,544
+Sie können das Transkript
+auch direkt bereitstellen.
+
+57
+00:03:04,584 --> 00:03:07,779
+Da automatische Transkripte
+Fehler enthalten können,
+
+58
+00:03:07,819 --> 00:03:12,197
+sollten Sie sich die betreffende Stelle
+selbst ansehen und den Kontext prüfen,
+
+59
+00:03:12,237 --> 00:03:14,849
+bevor Sie sie zitieren oder teilen.
+
+60
+00:03:14,896 --> 00:03:17,810
+Die vierte Idee sind
+interaktive Diagramme.
+
+61
+00:03:17,850 --> 00:03:20,415
+Wenn sich viele Kurven
+ein Diagramm teilen,
+
+62
+00:03:20,455 --> 00:03:24,145
+wie unten zu sehen, ist es schwer,
+einer einzelnen zu folgen.
+
+63
+00:03:24,185 --> 00:03:27,782
+Beide Diagramme zeigen
+ROC-Kurven je Vorhersagehorizont
+
+64
+00:03:27,822 --> 00:03:31,404
+und vergleichen ein neuronales
+Netz mit einer Baseline.
+
+65
+00:03:31,444 --> 00:03:34,285
+Im oberen Diagramm hebt sich
+ein Szenario deutlich ab,
+
+66
+00:03:34,325 --> 00:03:36,779
+während die anderen
+in den Hintergrund treten.
+
+67
+00:03:36,819 --> 00:03:41,173
+Das liegt daran, dass in der Legende
+ein Vorhersageszenario ausgewählt wurde,
+
+68
+00:03:41,213 --> 00:03:43,495
+wodurch seine Kurve stärker hervortritt.
+
+69
+00:03:43,535 --> 00:03:47,309
+Möglich ist das, weil Weights
+and Biases Vega-Lite unterstützt,
+
+70
+00:03:47,349 --> 00:03:51,284
+eine Sprache, mit der sich Diagramme
+barrierearm anpassen lassen.
+
+71
+00:03:51,324 --> 00:03:55,034
+Damit lassen sich Farben,
+Beschriftungen und Legenden anpassen
+
+72
+00:03:55,074 --> 00:03:57,816
+und interaktive
+Hervorhebungen beim Überfahren
+
+73
+00:03:57,856 --> 00:04:00,094
+oder Anklicken von Linien hinzufügen.
+
+74
+00:04:00,134 --> 00:04:04,247
+Solche Gestaltungsentscheidungen machen
+Vergleiche leichter nachvollziehbar.
+
+75
+00:04:04,287 --> 00:04:07,433
+Achten Sie also auf gut
+lesbare Farben und klare
+
+76
+00:04:07,473 --> 00:04:11,129
+Beschriftungen sowie
+auf interaktive Hervorhebungen.
+
+77
+00:04:11,169 --> 00:04:16,476
+Die letzte Idee: Bibliotheken für
+intuitive Visualisierung und Animation.
+
+78
+00:04:16,516 --> 00:04:19,825
+Visualisierungen und Animationen
+können einen mathematischen
+
+79
+00:04:19,865 --> 00:04:23,214
+Prozess Schritt für Schritt
+leichter nachvollziehbar machen.
+
+80
+00:04:23,254 --> 00:04:27,755
+Oben sehen Sie smalldiffusion,
+eine Bibliothek für Diffusionsmodelle.
+
+81
+00:04:27,795 --> 00:04:31,858
+Die Bilder zeigen, wie sich die Ausgabe
+verändert, wenn die Guidance-Skala,
+
+82
+00:04:31,898 --> 00:04:35,070
+hier als „CFG Scale“ bezeichnet,
+von null auf drei steigt.
+
+83
+00:04:35,110 --> 00:04:36,709
+Darunter sehen Sie Manim,
+
+84
+00:04:36,749 --> 00:04:39,856
+eine allgemeinere Engine
+für mathematische Animationen,
+
+85
+00:04:39,896 --> 00:04:43,485
+hier mit einer Kurve, einer Sekante
+und der Fläche darunter.
+
+86
+00:04:43,525 --> 00:04:47,347
+Da die Animation aus Code erzeugt
+wird, helfen solche Bibliotheken,
+
+87
+00:04:47,387 --> 00:04:49,307
+die Halluzinationen zu verringern,
+
+88
+00:04:49,347 --> 00:04:52,632
+die bei rein videobasierten
+Generatoren häufig auftreten.
+
+89
+00:04:52,672 --> 00:04:55,967
+Sie können sie einem KI-Agenten
+als Abhängigkeiten mitgeben,
+
+90
+00:04:56,007 --> 00:04:58,730
+damit er die visuelle
+Erklärung für Sie erstellt.
+
+91
+00:04:58,770 --> 00:05:01,723
+Prüfen Sie wie immer den Code
+und kontrollieren Sie,
+
+92
+00:05:01,763 --> 00:05:04,468
+ob die Animation das Konzept
+korrekt darstellt.
+
+93
+00:05:04,508 --> 00:05:07,180
+Ein guter Einstieg ist
+ein einzelnes Konzept,
+
+94
+00:05:07,220 --> 00:05:10,260
+das von einer visuellen
+Erklärung profitieren würde.
+
+95
+00:05:10,300 --> 00:05:14,285
+Prüfen und verfeinern Sie
+anschließend das Ergebnis.
+
+96
+00:05:14,325 --> 00:05:17,446
+Zum Schluss fasst diese Folie
+die Links zu den Werkzeugen
+
+97
+00:05:17,486 --> 00:05:20,481
+und Beispielen aus der gesamten
+Präsentation zusammen.
+
+98
+00:05:20,521 --> 00:05:24,570
+Prism für die Bearbeitung von LaTeX,
+die Beispiel-Videotutorials,
+
+99
+00:05:24,610 --> 00:05:27,463
+Weights and Biases
+für das Experiment-Tracking
+
+100
+00:05:27,503 --> 00:05:30,019
+und Vega-Lite für interaktive Diagramme.
+
+101
+00:05:30,059 --> 00:05:34,275
+Außerdem smalldiffusion für
+Visualisierungen von Diffusionsmodellen,
+
+102
+00:05:34,315 --> 00:05:39,009
+Manim für mathematische Animationen
+und das Beispielvideo mit Zeitstempeln.
+
+103
+00:05:39,049 --> 00:05:43,916
+Die Projektseite bündelt alles an einem
+Ort: die Präsentation zum Herunterladen,
+
+104
+00:05:43,956 --> 00:05:48,240
+das Poster, das Video, Stimmbeispiele
+und Links zu den Ressourcen.
+
+105
+00:05:48,280 --> 00:05:52,601
+Das war's für diesen Überblick.
+Vielen Dank fürs Zuschauen.
+
