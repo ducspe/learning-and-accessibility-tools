@@ -7,28 +7,39 @@
 body{margin:0;border-top:6px solid #00afe0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,Segoe UI,sans-serif}
 a{color:inherit;text-underline-offset:4px}.back{display:inline-block;margin-bottom:24px}a:focus-visible,audio:focus-visible{outline:3px solid #0877b8;outline-offset:4px}
 main{max-width:860px;margin:0 auto;padding:24px 16px}
-h1{font-size:22px;margin:0 0 4px}p{color:var(--muted);margin:0 0 18px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:22px 0 8px}p{color:var(--muted);margin:0 0 18px}
 .row{display:grid;grid-template-columns:1fr 320px;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:8px}
 .row.cur{border-color:var(--acc)}.name{font-weight:600}.meta{color:var(--muted);font-size:13px}
 audio{width:100%}@media(max-width:620px){.row{grid-template-columns:1fr}}
 </style></head><body><main>
 <a class="back" href="../../index.html#example">← Back to the video tutorial</a>
 <h1>Narration voice samples</h1>
-<p>Piper open-source voices, all generated locally and all reading the same passage from slide 2. The German sample reads a translation of it. The highlighted one is the voice in the current video.</p>
+<p>Piper open-source voices, all generated locally and all reading the same passage from slide 2. German voices read a German translation of it, and the Romanian voice reads a Romanian translation. The highlighted voice narrates the current tutorial.</p>
 <div id="list"></div>
 </main><script>
-const V=[["01_en_US-lessac-high_CURRENT","lessac (high)","US English · female · used in current video",1],
+const V=[["#","English (US)"],
+["01_en_US-lessac-high_CURRENT","lessac (high)","US English · female"],
 ["02_en_US-ryan-high","ryan (high)","US English · male"],
 ["03_en_US-ljspeech-high","ljspeech (high)","US English · female"],
 ["04_en_US-libritts-high_speaker0","libritts (high), speaker 0","US English · multi-speaker model"],
 ["05_en_US-libritts-high_speaker20","libritts (high), speaker 20","US English · multi-speaker model"],
 ["06_en_US-amy-medium","amy (medium)","US English · female"],
 ["07_en_US-joe-medium","joe (medium)","US English · male"],
-["08_en_US-hfc_female-medium","hfc_female (medium)","US English · female"],
+["08_en_US-hfc_female-medium","hfc_female (medium)","US English · female · used in current tutorial",1],
+["#","English (British)"],
 ["09_en_GB-cori-high","cori (high)","British English · female"],
 ["10_en_GB-alan-medium","alan (medium)","British English · male"],
 ["11_en_GB-northern_english_male-medium","northern_english_male (medium)","British English · male"],
-["12_de_DE-thorsten-high_GERMAN","thorsten (high)","German · male · for a German version"]];
-document.getElementById("list").innerHTML=V.map(([f,n,m,c])=>`<div class="row${c?" cur":""}"><div><div class="name">${n}</div><div class="meta">${m} · <code>${f.replace(/^\d+_/,"").replace(/_(CURRENT|GERMAN|speaker\d+)$/,"")}</code></div></div><audio controls preload="none" aria-label="Listen to ${n}: ${m}" src="${f}.mp3"></audio></div>`).join("");
+["#","German"],
+["12_de_DE-thorsten-high_GERMAN","thorsten (high)","German · male"],
+["13_de_DE-kerstin-medium_GERMAN","kerstin (medium)","German · female"],
+["14_de_DE-thorsten_emotional-medium_neutral_GERMAN","thorsten_emotional (medium), neutral style","German · male · model with 8 speaking styles"],
+["15_de_DE-thorsten_emotional-medium_amused_GERMAN","thorsten_emotional (medium), amused style","German · male · same model, different style"],
+["16_de_DE-mls-medium_speaker3_GERMAN","mls (medium), speaker 3","German · multi-speaker model (236 speakers)"],
+["17_de_DE-mls-medium_speaker10_GERMAN","mls (medium), speaker 10","German · multi-speaker model (236 speakers)"],
+["#","Romanian"],
+["18_ro_RO-mihai-medium_ROMANIAN","mihai (medium)","Romanian · male"]];
+const code=f=>f.replace(/^\d+_/,"").replace(/_(CURRENT|GERMAN|ROMANIAN)$/,"").replace(/_(neutral|amused|speaker\d+)$/,"");
+document.getElementById("list").innerHTML=V.map(([f,n,m,c])=>f==="#"?`<h2>${n}</h2>`:`<div class="row${c?" cur":""}"><div><div class="name">${n}</div><div class="meta">${m} · <code>${code(f)}</code></div></div><audio controls preload="none" aria-label="Listen to ${n}: ${m}" src="${f}.mp3"></audio></div>`).join("");
 document.addEventListener("play",e=>document.querySelectorAll("audio").forEach(a=>a!==e.target&&a.pause()),true);
 </script></body></html>
