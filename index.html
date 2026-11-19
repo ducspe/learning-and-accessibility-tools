@@ -206,7 +206,7 @@
           Your browser does not support embedded video. <a id="video-fallback" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.mp4">Download the video tutorial</a>.
         </video>
         <div class="video-tools">
-          <a id="video-download" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.mp4" download>Download English video (MP4 · 22 MB)</a>
+          <a id="video-download" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.mp4" download>Download English video (MP4)</a>
           <a data-subtitles="en" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.en.srt" download>English subtitles (SRT)</a>
           <a data-subtitles="de" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.de.srt" download>German subtitles (SRT)</a>
           <a data-subtitles="ro" href="ExtraMaterial/VideoTutorial/audio_en/LearningAndAccessibilityTools_tutorial_audio-en.ro.srt" download>Romanian subtitles (SRT)</a>
@@ -219,8 +219,8 @@
             <h3 id="downloads-title">Presentation &amp; poster</h3>
             <ul class="downloads">
               <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Presentation.pdf">Read the presentation</a><span class="file-type">PDF</span></li>
-              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Presentation.pptx" download>Download the presentation &amp; speaker notes</a><span class="file-type">PowerPoint · 3.7 MB</span></li>
-              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Poster_HelmholtzAIdesign_Final.pdf" download>Download the poster</a><span class="file-type">PDF · 1.3 MB</span></li>
+              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Presentation.pptx" download>Download the presentation &amp; speaker notes</a><span class="file-type">PowerPoint</span></li>
+              <li><a href="ExtraMaterial/LearningAndAccessibilityTools_Poster_HelmholtzAIdesign_Final.pdf" download>Download the poster</a><span class="file-type">PDF</span></li>
             </ul>
           </section>
           <section aria-labelledby="voices-title">
@@ -335,9 +335,9 @@
     const shareFallback = document.getElementById('share-fallback');
     const shareInput = document.getElementById('share-url');
     const audioVersions = {
-      en: { name: 'English', size: '22 MB' },
-      de: { name: 'German', size: '23 MB' },
-      ro: { name: 'Romanian', size: '23 MB' }
+      en: { name: 'English' },
+      de: { name: 'German' },
+      ro: { name: 'Romanian' }
     };
     let currentAudio = 'en';
     let loadingAudio = video.readyState === 0;
@@ -418,7 +418,7 @@
       }
       const download = document.getElementById('video-download');
       download.href = source;
-      download.textContent = `Download ${audioVersions[language].name} video (MP4 · ${audioVersions[language].size})`;
+      download.textContent = `Download ${audioVersions[language].name} video (MP4)`;
       document.getElementById('video-fallback').href = source;
       video.querySelector('source').src = source;
       setSubtitles();
