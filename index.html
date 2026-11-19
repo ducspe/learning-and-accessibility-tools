@@ -90,8 +90,9 @@
       padding: 24px 6px;
       text-decoration: none;
     }
-    .resource:hover { background: #eaf4fa; }
-    .resource:hover .resource-title { text-decoration: underline; text-underline-offset: 4px; }
+    a.resource:hover { background: #eaf4fa; }
+    a.resource:hover .resource-title { text-decoration: underline; text-underline-offset: 4px; }
+    .resource-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 10px; color: var(--navy); text-underline-offset: 4px; }
     .reference { padding-top: 4px; color: #406079; font-size: 14px; font-variant-numeric: tabular-nums; }
     .resource-title { display: block; color: var(--navy); font-size: 20px; font-weight: 650; line-height: 1.35; }
     .description { display: block; margin-top: 7px; color: var(--ink); font-size: 15px; }
@@ -233,7 +234,7 @@
         <p class="intro" id="example-description">The video above was created with Claude using the PowerPoint slides and speaker notes as its starting point. It shows how a presentation can guide an AI agent in creating a narrated tutorial. Below, you can explore practical tools and examples for creating more accessible research and educational materials.</p>
         <div class="resources-heading">
           <h2 id="resources-title">Explore the resources</h2>
-          <span class="count">7 links</span>
+          <span class="count">7 resources</span>
         </div>
         <ol class="resources">
           <li>
@@ -292,15 +293,17 @@
             </a>
           </li>
           <li>
-            <a class="resource" href="https://github.com/OHF-Voice/piper1-gpl">
+            <div class="resource">
               <span class="reference" aria-hidden="true">[6]</span>
               <span>
                 <span class="resource-title">Piper</span>
                 <span class="description">Generate narration locally with an open-source text-to-speech engine.</span>
-                <span class="destination">github.com/OHF-Voice/piper1-gpl</span>
+                <span class="resource-links">
+                  <a href="https://github.com/OHF-Voice/piper1-gpl">TTS engine (GitHub)</a>
+                  <a href="https://huggingface.co/rhasspy/piper-voices">Voice models (Hugging Face)</a>
+                </span>
               </span>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </a>
+            </div>
           </li>
           <li>
             <a class="resource" href="https://elevenlabs.io/">
