@@ -1,6 +1,10 @@
 # Learning and Accessibility Tools
 
-**Visit the landing page:** [https://ducspe.github.io/learning-and-accessibility-tools/](https://ducspe.github.io/learning-and-accessibility-tools/)
+This repository explores ideas and tools for creating more accessible research and educational material in collaboration with AI.
+
+A video tutorial demonstrates this approach: it was created with Claude using PowerPoint slides and speaker notes, with narration and subtitles in English, German and Romanian.
+
+**Explore the example and resources on the landing page:** [https://ducspe.github.io/learning-and-accessibility-tools/](https://ducspe.github.io/learning-and-accessibility-tools/)
 
 ## References
 
