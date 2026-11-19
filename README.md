@@ -13,3 +13,5 @@ A video tutorial demonstrates this approach: it was created with Claude using Po
 3. [Vega-Lite](https://vega.github.io/vega-lite/)
 4. [smalldiffusion](https://github.com/yuanchenyang/smalldiffusion)
 5. [Manim](https://github.com/3b1b/manim)
+6. [Piper](https://github.com/OHF-Voice/piper1-gpl)
+7. [ElevenLabs](https://elevenlabs.io/)
