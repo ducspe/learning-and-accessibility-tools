@@ -6,6 +6,10 @@ A video tutorial demonstrates this approach: it was created with Claude using Po
 
 **Explore the example and resources on the landing page:** [https://ducspe.github.io/learning-and-accessibility-tools/](https://ducspe.github.io/learning-and-accessibility-tools/)
 
+The presentation and landing page introduce a range of tools for creating more accessible research and educational material. You can also find links to these tools in the References section below.
+
+If GitHub Pages is slow or unavailable, access the video tutorials in the [Google Drive backup folder](https://drive.google.com/drive/folders/1vXS13uBE1TEwNyySQcSmUgNsimBlhYFX?usp=sharing).
+
 ## References
 
 1. [Video tutorials and slides](https://ducspe.github.io/DCPresentations/)
@@ -15,10 +19,6 @@ A video tutorial demonstrates this approach: it was created with Claude using Po
 5. [Manim](https://github.com/3b1b/manim)
 6. Piper: [TTS engine](https://github.com/OHF-Voice/piper1-gpl) | [Voice models](https://huggingface.co/rhasspy/piper-voices)
 7. [ElevenLabs](https://elevenlabs.io/)
-
-## Backup
-
-If GitHub Pages is slow or unavailable, access the video tutorials in the [Google Drive backup folder](https://drive.google.com/drive/folders/1vXS13uBE1TEwNyySQcSmUgNsimBlhYFX?usp=sharing).
 
 ## Prism workaround: LaTeX in VS Code
 
