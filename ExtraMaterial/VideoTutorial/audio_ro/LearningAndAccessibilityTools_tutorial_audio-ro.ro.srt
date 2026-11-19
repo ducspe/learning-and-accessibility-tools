@@ -1,481 +1,569 @@
 1
-00:00:00,840 --> 00:00:06,297
+00:00:00,848 --> 00:00:06,303
 Bun venit. Acest scurt tutorial reunește
 exemple practice de idei și instrumente
 
 2
-00:00:06,337 --> 00:00:11,009
+00:00:06,343 --> 00:00:11,014
 pentru crearea de materiale de cercetare
 și educaționale accesibile.
 
 3
-00:00:11,049 --> 00:00:16,255
+00:00:11,054 --> 00:00:16,357
 Scopul este ca materialele de cercetare
 și de predare să fie mai ușor de creat,
 
 4
-00:00:16,295 --> 00:00:19,151
+00:00:16,397 --> 00:00:19,305
 mai ușor de înțeles
 și mai ușor de revăzut.
 
 5
-00:00:19,191 --> 00:00:23,119
+00:00:19,345 --> 00:00:23,288
 Prezentarea își demonstrează
 și propria abordare:
 
 6
-00:00:23,159 --> 00:00:28,613
+00:00:23,328 --> 00:00:28,802
 aceleași slide-uri și note ale
 vorbitorului pot ghida un prezentator sau,
 
 7
-00:00:28,653 --> 00:00:31,905
+00:00:28,842 --> 00:00:32,106
 ca aici, un tutorial generat cu AI.
 
 8
-00:00:31,945 --> 00:00:35,848
+00:00:32,146 --> 00:00:36,037
 Primul instrument este
 un generator de formule LaTeX.
 
 9
-00:00:35,888 --> 00:00:41,068
+00:00:36,077 --> 00:00:41,256
 În loc să rețineți sintaxa LaTeX,
 descrieți ecuația în limbaj obișnuit.
 
 10
-00:00:41,108 --> 00:00:45,522
+00:00:41,296 --> 00:00:45,744
 Aici, promptul din stânga jos
 cere integrala lui f de x,
 
 11
-00:00:45,562 --> 00:00:49,380
+00:00:45,784 --> 00:00:49,630
 unde f de x este x la
 puterea a patra plus trei.
 
 12
-00:00:49,420 --> 00:00:53,253
+00:00:49,670 --> 00:00:53,527
 Asistentul inserează codul
 LaTeX corespunzător în document,
 
 13
-00:00:53,293 --> 00:00:57,888
+00:00:53,567 --> 00:00:58,191
 iar dumneavoastră puteți alege
 să păstrați sau să anulați modificarea.
 
 14
-00:00:57,928 --> 00:01:01,051
+00:00:58,231 --> 00:01:01,283
 În dreapta este rezultatul compilat:
 
 15
-00:01:01,091 --> 00:01:04,839
+00:01:01,323 --> 00:01:04,980
 f de x egal
 cu x la puterea a patra plus trei,
 
 16
-00:01:04,879 --> 00:01:11,068
+00:01:05,020 --> 00:01:11,064
 iar integrala sa, x la puterea a cincea
 supra cinci, plus trei x, plus C.
 
 17
-00:01:11,108 --> 00:01:14,428
+00:01:11,104 --> 00:01:14,379
 Acest exemplu folosește
 Prism de la OpenAI,
 
 18
-00:01:14,468 --> 00:01:17,593
+00:01:14,419 --> 00:01:17,503
 cu linkul în partea de jos a slide-ului.
 
 19
-00:01:17,633 --> 00:01:21,782
+00:01:17,543 --> 00:01:21,657
 Indiferent de instrument,
 verificați întotdeauna că ecuația
 
 20
-00:01:21,822 --> 00:01:26,892
+00:01:21,697 --> 00:01:26,732
 și notația generate corespund
 matematicii pe care ați avut-o în vedere.
 
 21
-00:01:26,932 --> 00:01:30,238
+00:01:26,772 --> 00:01:29,991
 Urmează: crearea
 de videoclipuri cu Claude,
 
 22
-00:01:30,278 --> 00:01:33,079
+00:01:30,031 --> 00:01:32,760
 ancorate în slide-urile prezentării.
 
 23
-00:01:33,119 --> 00:01:35,470
+00:01:32,800 --> 00:01:35,077
 Începeți cu propriile slide-uri.
 
 24
-00:01:35,510 --> 00:01:39,576
+00:01:35,117 --> 00:01:39,253
 Ele definesc conținutul
 și succesiunea și servesc drept reper
 
 25
-00:01:39,616 --> 00:01:42,780
+00:01:39,293 --> 00:01:42,510
 care menține videoclipul
 concentrat pe subiect.
 
 26
-00:01:42,820 --> 00:01:48,558
+00:01:42,550 --> 00:01:48,209
 Propria narațiune ancorează agentul AI
 și ajută la evitarea halucinațiilor.
 
 27
-00:01:48,598 --> 00:01:51,649
+00:01:48,249 --> 00:01:51,300
 Notele vorbitorului
 oferă apoi explicațiile,
 
 28
-00:01:51,689 --> 00:01:55,693
+00:01:51,340 --> 00:01:55,344
 pentru dumneavoastră ca prezentator
 și ca ghid pentru AI.
 
 29
-00:01:55,733 --> 00:01:58,087
+00:01:55,384 --> 00:01:57,741
 Pe baza slide-urilor și a notelor,
 
 30
-00:01:58,127 --> 00:02:01,565
+00:01:57,781 --> 00:02:01,223
 Claude poate folosi instrumente
 de narațiune și video
 
 31
-00:02:01,605 --> 00:02:04,844
+00:02:01,263 --> 00:02:04,506
 pentru a asambla un tutorial
 complet, ca acesta.
 
 32
-00:02:04,884 --> 00:02:10,188
+00:02:04,546 --> 00:02:09,930
 Pentru voce, puteți alege un model de voce
 open-source, ca în acest videoclip,
 
 33
-00:02:10,228 --> 00:02:12,517
+00:02:09,970 --> 00:02:12,294
 sau un serviciu precum ElevenLabs,
 
 34
-00:02:12,557 --> 00:02:16,120
+00:02:12,334 --> 00:02:15,950
 pentru o voce mai naturală,
 cu o intonație mai bună.
 
 35
-00:02:16,160 --> 00:02:18,903
+00:02:15,990 --> 00:02:18,713
 Ați putea chiar să vă
 clonați propria voce.
 
 36
-00:02:18,943 --> 00:02:23,214
+00:02:18,753 --> 00:02:22,785
 Este opțional și ridică o întrebare
 care merită discutată.
 
 37
-00:02:23,254 --> 00:02:25,999
+00:02:22,825 --> 00:02:25,585
 Puteți cere și subtitrări
 în diferite limbi,
 
 38
-00:02:26,039 --> 00:02:28,951
+00:02:25,625 --> 00:02:28,552
 pentru mai multă incluziune
 și accesibilitate.
 
 39
-00:02:28,991 --> 00:02:32,902
+00:02:28,592 --> 00:02:32,494
 În dreapta sunt exemple
 de videoclipuri realizate astfel,
 
 40
-00:02:32,942 --> 00:02:38,210
+00:02:32,534 --> 00:02:37,791
 despre AlphaFold 2, difuzie și tokenizare,
 disponibile la linkul de mai jos.
 
 41
-00:02:38,250 --> 00:02:41,599
+00:02:37,831 --> 00:02:41,236
 Înainte de publicare,
 verificați narațiunea,
 
 42
-00:02:41,639 --> 00:02:44,588
+00:02:41,276 --> 00:02:44,274
 elementele vizuale și subtitrările.
 
 43
-00:02:44,628 --> 00:02:49,903
+00:02:44,314 --> 00:02:49,614
 A treia idee: folosirea
 transcrierilor video pentru referințe.
 
 44
-00:02:49,943 --> 00:02:52,039
+00:02:49,654 --> 00:02:51,718
 Prelegerile lungi înregistrate,
 
 45
-00:02:52,079 --> 00:02:57,148
+00:02:51,758 --> 00:02:56,737
 precum aceasta despre învățarea automată
 pentru predicția structurii proteinelor,
 
 46
-00:02:57,188 --> 00:02:59,970
+00:02:56,777 --> 00:02:59,512
 sunt greu de căutat
 doar derulând prin ele.
 
 47
-00:03:00,010 --> 00:03:04,071
+00:02:59,552 --> 00:03:03,684
 Linkul către prelegere se
 află în stânga sus pe slide.
 
 48
-00:03:04,111 --> 00:03:06,632
+00:03:03,724 --> 00:03:06,268
 Pe YouTube, puteți deschide transcrierea
 
 49
-00:03:06,672 --> 00:03:09,618
+00:03:06,308 --> 00:03:09,279
 cu butonul „Show transcript”
 de sub videoclip.
 
 50
-00:03:09,658 --> 00:03:12,458
+00:03:09,319 --> 00:03:12,110
 Se deschide un panou în care fiecare rând
 
 51
-00:03:12,498 --> 00:03:15,754
+00:03:12,150 --> 00:03:15,395
 de text rostit este legat
 de un marcaj de timp.
 
 52
-00:03:15,794 --> 00:03:19,210
+00:03:15,435 --> 00:03:18,804
 Dați unui asistent AI
 adresa URL a videoclipului
 
 53
-00:03:19,250 --> 00:03:20,747
+00:03:18,844 --> 00:03:20,317
 și cereți-i să citească
 
 54
-00:03:20,787 --> 00:03:25,657
+00:03:20,357 --> 00:03:25,161
 transcrierea și să indice marcajul
 de timp al unei anumite explicații.
 
 55
-00:03:25,697 --> 00:03:28,737
+00:03:25,201 --> 00:03:28,296
 Puteți furniza și transcrierea direct.
 
 56
-00:03:28,777 --> 00:03:31,845
+00:03:28,336 --> 00:03:31,362
 Transcrierile automate pot conține erori,
 
 57
-00:03:31,885 --> 00:03:35,421
+00:03:31,402 --> 00:03:34,880
 așa că urmăriți pasajul
 propriu-zis și verificați-i
 
 58
-00:03:35,461 --> 00:03:39,086
+00:03:34,920 --> 00:03:38,506
 contextul înainte de a-l
 cita sau distribui.
 
 59
-00:03:39,126 --> 00:03:42,234
+00:03:38,553 --> 00:03:41,628
 A patra idee: graficele interactive.
 
 60
-00:03:42,274 --> 00:03:45,082
+00:03:41,668 --> 00:03:44,502
 Când multe curbe împart același grafic,
 
 61
-00:03:45,122 --> 00:03:49,468
+00:03:44,542 --> 00:03:48,929
 ca în graficul de jos, este
 dificil să urmăriți una singură.
 
 62
-00:03:49,508 --> 00:03:54,249
+00:03:48,969 --> 00:03:53,573
 Ambele grafice arată curbe ROC
 pentru fiecare orizont de prognoză,
 
 63
-00:03:54,289 --> 00:03:58,116
+00:03:53,613 --> 00:03:57,331
 comparând o rețea neuronală
 cu un model de referință.
 
 64
-00:03:58,156 --> 00:04:03,975
+00:03:57,371 --> 00:04:03,057
 În graficul de sus, un scenariu iese
 în evidență, iar celelalte trec în fundal.
 
 65
-00:04:04,015 --> 00:04:08,345
+00:04:03,097 --> 00:04:07,381
 Asta pentru că un scenariu
 de prognoză a fost selectat în legendă,
 
 66
-00:04:08,385 --> 00:04:10,901
+00:04:07,421 --> 00:04:09,911
 ceea ce face graficul său mai vizibil.
 
 67
-00:04:10,941 --> 00:04:15,242
+00:04:09,951 --> 00:04:14,388
 Acest lucru este posibil deoarece
 Weights and Biases acceptă Vega-Lite,
 
 68
-00:04:15,282 --> 00:04:19,562
+00:04:14,428 --> 00:04:18,841
 un limbaj pentru personalizarea
 graficelor în vederea accesibilității.
 
 69
-00:04:19,602 --> 00:04:24,249
+00:04:18,881 --> 00:04:23,621
 Cu el puteți ajusta culorile,
 etichetele și legendele și puteți adăuga
 
 70
-00:04:24,289 --> 00:04:29,511
+00:04:23,661 --> 00:04:28,988
 evidențiere interactivă la trecerea
 cursorului peste linii sau la clic pe ele.
 
 71
-00:04:29,551 --> 00:04:33,558
+00:04:29,028 --> 00:04:32,984
 Astfel de alegeri fac
 comparațiile mai ușor de urmărit.
 
 72
-00:04:33,598 --> 00:04:37,173
+00:04:33,024 --> 00:04:36,628
 Alegeți deci culori ușor
 de citit și etichete clare,
 
 73
-00:04:37,213 --> 00:04:39,976
+00:04:36,668 --> 00:04:39,427
 precum și evidențiere interactivă.
 
 74
-00:04:40,023 --> 00:04:44,892
+00:04:39,474 --> 00:04:44,259
 Ultima idee: biblioteci
 pentru vizualizare intuitivă și animație.
 
 75
-00:04:44,932 --> 00:04:48,062
+00:04:44,299 --> 00:04:47,439
 Vizualizarea și animația
 pot face un proces
 
 76
-00:04:48,102 --> 00:04:51,199
+00:04:47,479 --> 00:04:50,586
 matematic mai ușor de urmărit, pas cu pas.
 
 77
-00:04:51,239 --> 00:04:55,883
+00:04:50,626 --> 00:04:55,352
 Sus este smalldiffusion, o bibliotecă
 dedicată modelelor de difuzie.
 
 78
-00:04:55,923 --> 00:05:01,588
+00:04:55,392 --> 00:05:01,065
 Aceste panouri arată cum se schimbă
 rezultatul pe măsură ce scala de ghidare,
 
 79
-00:05:01,628 --> 00:05:05,036
+00:05:01,105 --> 00:05:04,517
 notată „CFG Scale”,
 crește de la zero la trei.
 
 80
-00:05:05,076 --> 00:05:09,679
+00:05:04,557 --> 00:05:09,063
 Dedesubt este Manim, un motor mai
 general de animație matematică,
 
 81
-00:05:09,719 --> 00:05:13,647
+00:05:09,103 --> 00:05:12,949
 prezentat aici cu o curbă,
 o secantă și aria de sub ea.
 
 82
-00:05:13,687 --> 00:05:16,320
+00:05:12,989 --> 00:05:15,546
 Deoarece animația este generată din cod,
 
 83
-00:05:16,360 --> 00:05:19,709
+00:05:15,586 --> 00:05:18,840
 astfel de biblioteci ajută
 la reducerea halucinațiilor
 
 84
-00:05:19,749 --> 00:05:23,554
+00:05:18,880 --> 00:05:22,578
 care apar adesea la generatoarele
 bazate exclusiv pe video.
 
 85
-00:05:23,594 --> 00:05:26,639
+00:05:22,618 --> 00:05:25,703
 Le puteți oferi unui
 agent AI ca dependențe,
 
 86
-00:05:26,679 --> 00:05:31,935
+00:05:25,743 --> 00:05:31,140
 astfel încât acesta să construiască
 explicația vizuală pentru dumneavoastră.
 
 87
-00:05:31,975 --> 00:05:35,059
+00:05:31,180 --> 00:05:34,468
 Ca întotdeauna,
 inspectați codul și verificați
 
 88
-00:05:35,099 --> 00:05:37,951
+00:05:34,508 --> 00:05:37,547
 dacă animația reprezintă corect conceptul.
 
 89
-00:05:37,991 --> 00:05:41,117
+00:05:37,587 --> 00:05:40,674
 Un bun punct de plecare
 este un singur concept
 
 90
-00:05:41,157 --> 00:05:44,024
+00:05:40,714 --> 00:05:43,533
 care ar beneficia de o explicație vizuală.
 
 91
-00:05:44,064 --> 00:05:47,931
+00:05:43,573 --> 00:05:47,350
 Apoi verificați și rafinați rezultatul.
 
 92
-00:05:47,971 --> 00:05:52,245
+00:05:47,390 --> 00:05:50,962
+Pe scurt, iată principalele
+idei de reținut.
+
+93
+00:05:51,002 --> 00:05:53,202
+Începeți cu propria narațiune.
+
+94
+00:05:53,242 --> 00:05:55,916
+Mesajul dumneavoastră vine pe primul loc,
+
+95
+00:05:55,956 --> 00:05:59,409
+iar slide-urile și notele
+vorbitorului ghidează AI-ul
+
+96
+00:05:59,449 --> 00:06:02,288
+și mențin materialul
+concentrat pe subiect.
+
+97
+00:06:02,328 --> 00:06:05,778
+Faceți
+din accesibilitate o parte a designului.
+
+98
+00:06:05,818 --> 00:06:10,205
+Țineți cont de nevoi diferite,
+de exemplu prin elemente vizuale clare,
+
+99
+00:06:10,245 --> 00:06:13,660
+culori ușor de citit
+și subtitrări în mai multe limbi.
+
+100
+00:06:13,700 --> 00:06:17,074
+Încurajați învățarea activă,
+nu doar vizionarea.
+
+101
+00:06:17,114 --> 00:06:19,924
+Invitați cursanții să ajusteze un grafic,
+
+102
+00:06:19,964 --> 00:06:23,857
+să exploreze un exemplu
+sau să își verifice înțelegerea.
+
+103
+00:06:23,897 --> 00:06:25,233
+Susțineți motivația,
+
+104
+00:06:25,273 --> 00:06:29,239
+pentru că îi ajută pe oameni să se
+implice și să rămână interesați.
+
+105
+00:06:29,279 --> 00:06:32,479
+Provocările ludice
+și gamificarea pot ajuta,
+
+106
+00:06:32,519 --> 00:06:35,979
+atât timp cât servesc
+obiectivului de învățare.
+
+107
+00:06:36,019 --> 00:06:38,588
+Și rămâneți implicați în proces.
+
+108
+00:06:38,628 --> 00:06:42,756
+Verificați acuratețea,
+claritatea și utilitatea a ceea
+
+109
+00:06:42,796 --> 00:06:47,346
+ce produce AI-ul și revizuiți-l
+acolo unde este necesar.
+
+110
+00:06:47,397 --> 00:06:51,710
 În final, acest slide reunește
 linkurile către instrumentele
 
-93
-00:05:52,285 --> 00:05:55,665
+111
+00:06:51,750 --> 00:06:55,160
 și exemplele folosite
 pe parcursul prezentării.
 
-94
-00:05:55,705 --> 00:05:59,331
+112
+00:06:55,200 --> 00:06:58,794
 Prism pentru editarea LaTeX,
 exemplele de tutoriale video,
 
-95
-00:05:59,371 --> 00:06:02,462
+113
+00:06:58,834 --> 00:07:01,899
 Weights and Biases
 pentru urmărirea experimentelor
 
-96
-00:06:02,502 --> 00:06:05,020
+114
+00:07:01,939 --> 00:07:04,435
 și Vega-Lite pentru grafice interactive.
 
-97
-00:06:05,060 --> 00:06:08,800
+115
+00:07:04,475 --> 00:07:08,287
 Apoi smalldiffusion
 pentru vizualizarea modelelor de difuzie,
 
-98
-00:06:08,840 --> 00:06:13,488
+116
+00:07:08,327 --> 00:07:13,063
 Manim pentru animații matematice
 și videoclipul exemplu cu marcaje de timp.
 
-99
-00:06:13,528 --> 00:06:19,810
+117
+00:07:13,103 --> 00:07:19,326
 Pagina proiectului reunește totul într-un
 singur loc: prezentarea descărcabilă,
 
-100
-00:06:19,850 --> 00:06:25,444
+118
+00:07:19,366 --> 00:07:24,911
 posterul, videoclipul, mostrele
 de voce și linkurile către resurse.
 
-101
-00:06:25,484 --> 00:06:31,283
+119
+00:07:24,959 --> 00:07:27,851
 Aceasta a fost prezentarea generală.
+
+120
+00:07:27,891 --> 00:07:30,768
 Vă mulțumim pentru vizionare.
 

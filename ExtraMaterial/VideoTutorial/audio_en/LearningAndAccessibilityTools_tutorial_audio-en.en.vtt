@@ -1,456 +1,525 @@
 WEBVTT
 
 1
-00:00:00.858 --> 00:00:05.523
+00:00:00.848 --> 00:00:05.521
 Welcome. This short tutorial brings
 together practical examples of ideas
 
 2
-00:00:05.563 --> 00:00:10.007
+00:00:05.561 --> 00:00:10.038
 and tools for creating accessible
 research and educational material.
 
 3
-00:00:10.047 --> 00:00:14.759
+00:00:10.078 --> 00:00:14.656
 The aim is to make research
 and teaching material easier to create,
 
 4
-00:00:14.799 --> 00:00:17.919
+00:00:14.696 --> 00:00:17.729
 easier to understand,
 and easier to revisit.
 
 5
-00:00:17.959 --> 00:00:21.566
+00:00:17.769 --> 00:00:21.319
 The presentation also
 demonstrates its own approach:
 
 6
-00:00:21.606 --> 00:00:25.637
+00:00:21.359 --> 00:00:25.323
 the same slides and speaker notes
 can guide a live presenter or,
 
 7
-00:00:25.677 --> 00:00:28.478
+00:00:25.363 --> 00:00:28.125
 as here, an AI-generated tutorial.
 
 8
-00:00:28.725 --> 00:00:32.136
+00:00:28.165 --> 00:00:31.588
 The first tool is a LaTeX
 formula generator.
 
 9
-00:00:32.176 --> 00:00:34.482
+00:00:31.628 --> 00:00:33.933
 Instead of remembering LaTeX syntax,
 
 10
-00:00:34.522 --> 00:00:37.584
+00:00:33.973 --> 00:00:37.035
 you describe the equation
 in ordinary language.
 
 11
-00:00:37.624 --> 00:00:41.892
+00:00:37.075 --> 00:00:41.448
 Here, the prompt at the bottom left
 asks for the integral of f of x,
 
 12
-00:00:41.932 --> 00:00:45.037
+00:00:41.488 --> 00:00:44.668
 where f of x is x to the
 fourth power plus three.
 
 13
-00:00:45.077 --> 00:00:49.031
+00:00:44.708 --> 00:00:48.703
 The assistant inserts the matching
 LaTeX code into the document,
 
 14
-00:00:49.071 --> 00:00:51.941
+00:00:48.743 --> 00:00:51.643
 and you can choose to keep
 or undo the change.
 
 15
-00:00:51.981 --> 00:00:57.585
+00:00:51.683 --> 00:00:57.449
 On the right is the compiled result:
 f of x equals x to the fourth plus three,
 
 16
-00:00:57.625 --> 00:01:02.328
+00:00:57.489 --> 00:01:02.328
 and its integral, x to the fifth
 over five, plus three x, plus C.
 
 17
-00:01:02.368 --> 00:01:06.837
+00:01:02.368 --> 00:01:06.951
 This example uses OpenAI's Prism,
 linked at the bottom of the slide.
 
 18
-00:01:06.877 --> 00:01:10.490
+00:01:06.991 --> 00:01:10.602
 Whatever the tool, always check
 that the generated equation
 
 19
-00:01:10.530 --> 00:01:13.755
+00:01:10.642 --> 00:01:13.864
 and notation match
 the mathematics you intended.
 
 20
-00:01:13.931 --> 00:01:18.584
+00:01:13.941 --> 00:01:18.720
 Next: creating videos with Claude,
 anchored in presentation slides.
 
 21
-00:01:18.624 --> 00:01:20.511
+00:01:18.760 --> 00:01:20.758
 Start with your own slides.
 
 22
-00:01:20.551 --> 00:01:22.848
+00:01:20.798 --> 00:01:23.072
 They define the content and the sequence,
 
 23
-00:01:22.888 --> 00:01:27.391
+00:01:23.112 --> 00:01:27.551
 and act as the ground truth that keeps
 the video focused on the subject matter.
 
 24
-00:01:27.431 --> 00:01:32.788
+00:01:27.591 --> 00:01:32.878
 Writing your own narrative anchors the AI
 agent and helps to avoid hallucinations.
 
 25
-00:01:32.828 --> 00:01:35.322
+00:01:32.918 --> 00:01:35.448
 Speaker notes then
 supply the explanations,
 
 26
-00:01:35.362 --> 00:01:38.426
+00:01:35.488 --> 00:01:38.595
 for you as the presenter
 and as guidance for the AI.
 
 27
-00:01:38.466 --> 00:01:40.145
+00:01:38.635 --> 00:01:40.287
 With the slides and notes,
 
 28
-00:01:40.185 --> 00:01:44.570
+00:01:40.327 --> 00:01:44.635
 Claude can use narration and video
 tools to assemble a complete tutorial,
 
 29
-00:01:44.610 --> 00:01:45.510
+00:01:44.675 --> 00:01:45.569
 like this one.
 
 30
-00:01:45.550 --> 00:01:49.980
+00:01:45.609 --> 00:01:49.918
 For the voice, you can choose an
 open-source voice model, as in this video,
 
 31
-00:01:50.020 --> 00:01:54.788
+00:01:49.958 --> 00:01:54.596
 or a service such as ElevenLabs for a more
 natural voice with better intonation.
 
 32
-00:01:54.828 --> 00:01:57.143
+00:01:54.636 --> 00:01:56.898
 You could even clone your own voice.
 
 33
-00:01:57.183 --> 00:02:00.585
+00:01:56.938 --> 00:02:00.416
 That is optional,
 and a question worth discussing.
 
 34
-00:02:00.625 --> 00:02:03.830
+00:02:00.456 --> 00:02:03.572
 You can also ask for subtitles
 in different languages,
 
 35
-00:02:03.870 --> 00:02:06.093
+00:02:03.612 --> 00:02:05.774
 for more inclusion and accessibility.
 
 36
-00:02:06.133 --> 00:02:10.220
+00:02:05.814 --> 00:02:09.897
 On the right are example videos
 made this way, on AlphaFold 2,
 
 37
-00:02:10.260 --> 00:02:14.055
+00:02:09.937 --> 00:02:13.727
 diffusion, and tokenization,
 available at the link below.
 
 38
-00:02:14.095 --> 00:02:19.166
+00:02:13.767 --> 00:02:18.938
 Before publishing, review the narration,
 the visuals, and the subtitles.
 
 39
-00:02:19.263 --> 00:02:23.544
+00:02:18.978 --> 00:02:23.304
 The third idea: using video
 transcripts for references.
 
 40
-00:02:23.584 --> 00:02:24.977
+00:02:23.344 --> 00:02:24.757
 Long recorded lectures,
 
 41
-00:02:25.017 --> 00:02:28.585
+00:02:24.797 --> 00:02:28.419
 like this one on machine learning
 for protein structure prediction,
 
 42
-00:02:28.625 --> 00:02:31.146
+00:02:28.459 --> 00:02:31.016
 are hard to search
 by scrubbing through them.
 
 43
-00:02:31.186 --> 00:02:34.369
+00:02:31.056 --> 00:02:34.209
 The lecture is linked
 at the top left of the slide.
 
 44
-00:02:34.409 --> 00:02:36.748
+00:02:34.249 --> 00:02:36.512
 On YouTube, you can open the transcript
 
 45
-00:02:36.788 --> 00:02:39.716
+00:02:36.552 --> 00:02:39.387
 with the Show transcript
 button below the video.
 
 46
-00:02:39.756 --> 00:02:44.326
+00:02:39.427 --> 00:02:44.126
 It opens a panel where every line
 of spoken text is linked to a timestamp.
 
 47
-00:02:44.366 --> 00:02:48.352
+00:02:44.166 --> 00:02:48.163
 Give an AI assistant the video's URL
 and ask it to read the transcript
 
 48
-00:02:48.392 --> 00:02:51.324
+00:02:48.203 --> 00:02:51.145
 and return the timestamp
 of a specific explanation.
 
 49
-00:02:51.364 --> 00:02:54.253
+00:02:51.185 --> 00:02:54.024
 You can also supply
 the transcript directly.
 
 50
-00:02:54.293 --> 00:02:56.997
+00:02:54.064 --> 00:02:56.813
 Automatic transcripts can contain errors,
 
 51
-00:02:57.037 --> 00:03:02.257
+00:02:56.853 --> 00:03:02.158
 so watch the actual passage and check
 its context before citing or sharing it.
 
 52
-00:03:02.305 --> 00:03:05.617
+00:03:02.415 --> 00:03:05.787
 The fourth idea is interactive graphs.
 
 53
-00:03:05.657 --> 00:03:08.928
+00:03:05.827 --> 00:03:08.979
 When many curves share one
 plot, as in the lower chart,
 
 54
-00:03:08.968 --> 00:03:11.255
+00:03:09.019 --> 00:03:11.225
 following any single one is difficult.
 
 55
-00:03:11.295 --> 00:03:14.769
+00:03:11.265 --> 00:03:14.687
 Both charts show ROC curves
 per forecast lead time,
 
 56
-00:03:14.809 --> 00:03:17.772
+00:03:14.727 --> 00:03:17.645
 comparing a neural
 network with a baseline.
 
 57
-00:03:17.812 --> 00:03:20.532
+00:03:17.685 --> 00:03:20.172
 In the upper chart,
 one scenario stands out
 
 58
-00:03:20.572 --> 00:03:23.267
+00:03:20.212 --> 00:03:22.679
 while the others fade into the background.
 
 59
-00:03:23.307 --> 00:03:27.084
+00:03:22.719 --> 00:03:26.476
 That is because a forecast scenario
 was selected in the legend,
 
 60
-00:03:27.124 --> 00:03:29.244
+00:03:26.516 --> 00:03:28.625
 which makes its graph more salient.
 
 61
-00:03:29.284 --> 00:03:33.081
+00:03:28.665 --> 00:03:32.478
 This is possible because Weights
 and Biases supports Vega-Lite,
 
 62
-00:03:33.121 --> 00:03:36.288
+00:03:32.518 --> 00:03:35.699
 a language for customizing
 charts for accessibility.
 
 63
-00:03:36.328 --> 00:03:39.406
+00:03:35.739 --> 00:03:38.850
 With it, you can adjust colors,
 labels, and legends,
 
 64
-00:03:39.446 --> 00:03:43.813
+00:03:38.890 --> 00:03:43.302
 and add interactive highlighting when
 hovering over or clicking on lines.
 
 65
-00:03:43.853 --> 00:03:47.275
+00:03:43.342 --> 00:03:46.816
 Choices like these make
 comparisons easier to follow.
 
 66
-00:03:47.315 --> 00:03:50.032
+00:03:46.856 --> 00:03:49.693
 So aim for readable colors
 and clear labels,
 
 67
-00:03:50.072 --> 00:03:52.641
+00:03:49.733 --> 00:03:52.354
 as well as interactive highlighting.
 
 68
-00:03:52.681 --> 00:03:57.390
+00:03:52.651 --> 00:03:57.609
 The last idea: intuitive visualization
 and animation libraries.
 
 69
-00:03:57.430 --> 00:03:59.656
+00:03:57.649 --> 00:03:59.881
 Visualization and animation can
 
 70
-00:03:59.696 --> 00:04:03.815
+00:03:59.921 --> 00:04:04.045
 make a mathematical process
 easier to follow, step by step.
 
 71
-00:04:03.855 --> 00:04:08.419
+00:04:04.085 --> 00:04:08.742
 At the top is smalldiffusion,
 a library focused on diffusion models.
 
 72
-00:04:08.459 --> 00:04:12.376
+00:04:08.782 --> 00:04:12.956
 These panels show how its output
 changes as the guidance scale,
 
 73
-00:04:12.416 --> 00:04:15.180
+00:04:12.996 --> 00:04:16.008
 labelled CFG scale,
 goes from zero to three.
 
 74
-00:04:15.220 --> 00:04:19.411
+00:04:16.048 --> 00:04:20.180
 Below is Manim, a more general
 mathematical animation engine,
 
 75
-00:04:19.451 --> 00:04:23.890
+00:04:20.220 --> 00:04:24.598
 shown here with a curve, a secant
 line, and the area beneath it.
 
 76
-00:04:23.930 --> 00:04:26.737
+00:04:24.638 --> 00:04:27.448
 Because the animation
 is generated from code,
 
 77
-00:04:26.777 --> 00:04:29.824
+00:04:27.488 --> 00:04:30.539
 libraries like these help
 reduce the hallucinations
 
 78
-00:04:29.864 --> 00:04:33.079
+00:04:30.579 --> 00:04:33.797
 that often arise from purely
 video-based generators.
 
 79
-00:04:33.119 --> 00:04:35.969
+00:04:33.837 --> 00:04:36.598
 You can give them to an AI
 agent as dependencies,
 
 80
-00:04:36.009 --> 00:04:38.781
+00:04:36.638 --> 00:04:39.325
 so it can build the visual
 explanation for you.
 
 81
-00:04:38.821 --> 00:04:41.113
+00:04:39.365 --> 00:04:41.669
 As always, inspect the code and check
 
 82
-00:04:41.153 --> 00:04:44.430
+00:04:41.709 --> 00:04:45.002
 that the animation represents
 the concept correctly.
 
 83
-00:04:44.470 --> 00:04:46.553
+00:04:45.042 --> 00:04:47.090
 A good way to start is with one concept
 
 84
-00:04:46.593 --> 00:04:48.995
+00:04:47.130 --> 00:04:49.529
 that would benefit
 from a visual explanation.
 
 85
-00:04:49.035 --> 00:04:51.929
+00:04:49.569 --> 00:04:52.426
 Then review and refine the result.
 
 86
-00:04:52.106 --> 00:04:55.099
+00:04:52.466 --> 00:04:55.458
+To sum up, here are the key takeaways.
+
+87
+00:04:55.498 --> 00:04:57.647
+Start with your own narrative.
+
+88
+00:04:57.687 --> 00:04:59.200
+Your message comes first,
+
+89
+00:04:59.240 --> 00:05:03.764
+and your slides and speaker notes guide
+the AI and keep the material focused.
+
+90
+00:05:03.804 --> 00:05:06.277
+Make accessibility part of the design.
+
+91
+00:05:06.317 --> 00:05:09.740
+Consider different needs,
+for example with clear visuals,
+
+92
+00:05:09.780 --> 00:05:12.938
+readable colors, and subtitles
+in several languages.
+
+93
+00:05:12.978 --> 00:05:16.205
+Encourage active learning,
+rather than just watching.
+
+94
+00:05:16.245 --> 00:05:21.549
+Invite learners to adjust a graph, explore
+an example, or test their understanding.
+
+95
+00:05:21.589 --> 00:05:26.078
+Support motivation, because it helps
+people engage and stay interested.
+
+96
+00:05:26.118 --> 00:05:28.928
+Playful challenges
+and gamification can help,
+
+97
+00:05:28.968 --> 00:05:31.819
+as long as they serve
+the learning objective.
+
+98
+00:05:31.859 --> 00:05:33.921
+And keep yourself in the loop.
+
+99
+00:05:33.961 --> 00:05:35.968
+Check the accuracy, clarity,
+
+100
+00:05:36.008 --> 00:05:40.907
+and usefulness of what the AI produces,
+and revise it where needed.
+
+101
+00:05:41.034 --> 00:05:44.005
 Finally, this slide collects
 the links to the tools
 
-87
-00:04:55.139 --> 00:04:57.874
+102
+00:05:44.045 --> 00:05:46.761
 and examples used
 throughout the presentation.
 
-88
-00:04:57.914 --> 00:05:01.340
+103
+00:05:46.801 --> 00:05:50.180
 Prism for LaTeX editing,
 the video tutorial examples,
 
-89
-00:05:01.380 --> 00:05:04.026
+104
+00:05:50.220 --> 00:05:52.950
 Weights and Biases
 for experiment tracking,
 
-90
-00:05:04.066 --> 00:05:06.612
+105
+00:05:52.990 --> 00:05:55.382
 and Vega-Lite for interactive graphs.
 
-91
-00:05:06.652 --> 00:05:10.106
+106
+00:05:55.422 --> 00:05:58.936
 Then smalldiffusion for diffusion
 model visualizations,
 
-92
-00:05:10.146 --> 00:05:14.784
+107
+00:05:58.976 --> 00:06:03.694
 Manim for mathematical animations,
 and the example video with timestamps.
 
-93
-00:05:14.824 --> 00:05:20.560
+108
+00:06:03.734 --> 00:06:09.411
 The project page gathers everything in one
 place: the downloadable presentation,
 
-94
-00:05:20.600 --> 00:05:25.021
+109
+00:06:09.451 --> 00:06:13.830
 the poster, the video, voice
 samples, and resource links.
 
-95
-00:05:25.061 --> 00:05:28.905
+110
+00:06:13.870 --> 00:06:17.933
 That's all for this overview.
 Thank you for watching.
 
