@@ -22,7 +22,7 @@ If GitHub Pages is slow or unavailable, access the video tutorials in the [Googl
 
 ## Prism workaround: LaTeX in VS Code
 
-[OpenAI Prism will shut down on January 1, 2027](https://openai.com/index/introducing-prism/). Export your Prism projects before that date to keep your files. A close alternative for writing, compiling, and previewing LaTeX locally is **VS Code + TeX Live + LaTeX Workshop**. Add the [Codex extension by OpenAI](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt) for AI assistance with drafting, revising, and fixing LaTeX errors.
+[OpenAI Prism will shut down on January 1, 2027](https://openai.com/index/introducing-prism/). A close alternative for writing, compiling, and previewing LaTeX locally is **VS Code + TeX Live + LaTeX Workshop**. Add the [Codex extension by OpenAI](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt) for AI assistance with drafting, revising, and fixing LaTeX errors.
 
 ### Install the tools
 
